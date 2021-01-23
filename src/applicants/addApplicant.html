@@ -1,0 +1,55 @@
+<template>
+	<form submit.delegate='save()'>
+		
+		  
+		  <div class="form-group">
+    		<label for="name">name</label>
+    		<input type="text" value.bind="applicant.name"
+           		class="form-control" id="name" placeholder="name">
+  		</div>
+		  
+		  <div class="form-group">
+    		<label for="familyName">familyName</label>
+    		<input type="text" value.bind="applicant.familyName"
+           		class="form-control" id="familyName" placeholder="familyName">
+		  </div>
+
+		  <div class="form-group">
+    		<label for="address">address</label>
+    		<input type="text" value.bind="applicant.address"
+           		class="form-control" id="address" placeholder="address">
+		  </div>
+
+		  <div class="form-group">
+    		<label for="countryOfOrigin">countryOfOrigin</label>
+    		<input type="text" value.bind="applicant.countryOfOrigin"
+           		class="form-control" id="countryOfOrigin" placeholder="countryOfOrigin">
+		  </div>
+
+		  <div class="form-group">
+    		<label for="emailAddress">emailAddress</label>
+    		<input type="text" value.bind="applicant.emailAddress"
+           		class="form-control" id="emailAddress" placeholder="emailAddress">
+		  </div>
+
+		  <div class="form-group">
+    		<label for="age">emailAddress</label>
+    		<input type="number" value.bind="applicant.age"
+           		class="form-control" id="age" placeholder="age">
+		  </div>
+
+		  <!-- <div class="form-group">
+    		<label for="hired">hired</label>
+    		<input type="checkbox" value.bind="applicant.hired"
+           		class="form-control" id="hired" placeholder="hired">
+		  </div> -->
+  		
+  		<button type="submit" class="btn btn-primary">Save</button>
+      <ul if.bind="controller.errors">
+          <li repeat.for="error of controller.errors" style="color:red;">
+            ${error.message}
+          </li>
+      </ul>
+
+	</form>
+</template>
