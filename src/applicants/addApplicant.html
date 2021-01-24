@@ -46,7 +46,9 @@
 		  </div>
   		
 		  <button type="submit" class="btn btn-primary" t="Save"></button>
-		  <button type="reset" class="btn btn-warning" t="Reset"></button>
+		  <button type="reset" class="btn btn-warning" t="Reset" click.delegate="reset()"
+		  disabled.bind="!canReset"></button>
+		  
       <ul if.bind="controller.errors">
           <li repeat.for="error of controller.errors" style="color:red;">
             ${error.message}

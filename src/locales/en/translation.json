@@ -8,6 +8,9 @@
     "Hired":"Hired",
     "Save":"Save",
     "Reset":"Reset",
+    "Ok":"Ok",
+    "Cancel":"Cancel",
+    "ResetConfirmationMessage":"Are you sure to reset data?",
     "ApplicantListings":"Applicant Listings"
    
   }

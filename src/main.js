@@ -10,6 +10,7 @@ export function configure(aurelia) {
 	aurelia.use.standardConfiguration().developmentLogging()
 	.plugin('aurelia-dialog')
 	.plugin('aurelia-validation')
+	
 	.plugin('aurelia-i18n', (instance) => {
         let aliases = ['t', 'i18n'];
         // add aliases for 't' attribute
@@ -32,7 +33,8 @@ export function configure(aurelia) {
 		});
 		
 	  
-      });
+	  }) ;
+	   
 
 	aurelia.start().then(a=>a.setRoot("shell"));
 	
