@@ -3,6 +3,7 @@ import {DataRepository} from 'services/dataRepository';
 import {ValidationRules, ValidationController, validateTrigger} from 'aurelia-validation';
 import {BootstrapFormRenderer} from 'common/bootstrap-form-renderer';
 
+
 @inject(DataRepository, ValidationController)
 export class AddApplicant {
 	
@@ -18,18 +19,12 @@ console.log('testtttt',dataRepository);
 		this.controller.addRenderer(new BootstrapFormRenderer());
         console.log('3');
 
-		// ValidationRules
-		// .ensure(j => j.title)
-		// .required()
-		// .minLength(3)
-	
-        // .on(this.applicant);
+		
 
         // ValidationRules
-		// .ensure(j => j.name)
+		// .ensure('name')
 		// .required()
-		// .minLength(3)
-	
+		// .minLength(3)	
         // .on(this.applicant);
         
         console.log('testtttt end');

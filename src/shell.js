@@ -7,7 +7,7 @@ export class Shell {
 	}
 	configureRouter(config, router) {
 		this.router = router;
-		config.title = "Capital Area .NET User Group";
+		config.title = "Hahn app";
 		config.addPipelineStep('authorize', ToastNavResult);
 		//config.options.pushState = true;
 		config.map([

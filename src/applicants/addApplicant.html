@@ -3,48 +3,50 @@
 		
 		  
 		  <div class="form-group">
-    		<label for="name">name</label>
-    		<input type="text" value.bind="applicant.name"
-           		class="form-control" id="name" placeholder="name">
+    		<span t="Name"></span>
+			<input type="text" value.bind="applicant.name"
+           		class="form-control" id="name" >
   		</div>
 		  
 		  <div class="form-group">
-    		<label for="familyName">familyName</label>
+			<span t="FamilyName"></span>
+    		
     		<input type="text" value.bind="applicant.familyName"
-           		class="form-control" id="familyName" placeholder="familyName">
+           		class="form-control" id="familyName" >
 		  </div>
 
 		  <div class="form-group">
-    		<label for="address">address</label>
+			<span t="Address"></span>
     		<input type="text" value.bind="applicant.address"
-           		class="form-control" id="address" placeholder="address">
+           		class="form-control" id="address" >
 		  </div>
 
 		  <div class="form-group">
-    		<label for="countryOfOrigin">countryOfOrigin</label>
+			<span t="CountryOfOrigin"></span>
     		<input type="text" value.bind="applicant.countryOfOrigin"
-           		class="form-control" id="countryOfOrigin" placeholder="countryOfOrigin">
+           		class="form-control" id="countryOfOrigin" >
 		  </div>
 
 		  <div class="form-group">
-    		<label for="emailAddress">emailAddress</label>
+			<span t="EmailAddress"></span>
     		<input type="text" value.bind="applicant.emailAddress"
-           		class="form-control" id="emailAddress" placeholder="emailAddress">
+           		class="form-control" id="emailAddress">
 		  </div>
 
 		  <div class="form-group">
-    		<label for="age">emailAddress</label>
+			<span t="Age"></span>
     		<input type="number" value.bind="applicant.age"
-           		class="form-control" id="age" placeholder="age">
+           		class="form-control" id="age" placeholder="Age">
 		  </div>
 
-		  <!-- <div class="form-group">
-    		<label for="hired">hired</label>
-    		<input type="checkbox" value.bind="applicant.hired"
-           		class="form-control" id="hired" placeholder="hired">
-		  </div> -->
+		  <div class="form-group">
+			<span t="Hired"></span>
+    		<input type="checkbox" checked.bind="applicant.hired"
+           		class="form-control" id="hired" >
+		  </div>
   		
-  		<button type="submit" class="btn btn-primary">Save</button>
+		  <button type="submit" class="btn btn-primary" t="Save"></button>
+		  <button type="reset" class="btn btn-warning" t="Reset"></button>
       <ul if.bind="controller.errors">
           <li repeat.for="error of controller.errors" style="color:red;">
             ${error.message}
