@@ -11,27 +11,13 @@ export class Shell {
 		config.addPipelineStep('authorize', ToastNavResult);
 		//config.options.pushState = true;
 		config.map([
-				{ route: ['', 'events'], 
-					viewPorts: { mainContent: {moduleId: 'events/events'}, 
-					sideBar: {moduleId: 'sideBar/sponsors'}} , 
-					name: 'Events', title: 'Events', nav: true},
-				{ route: 'jobs', name: 'jobs', viewPorts: { mainContent: {moduleId: 'jobs/jobs'}, 
-					sideBar: { moduleId: 'sideBar/sponsors'}},  
-					title: 'Jobs', nav: true },
-				{ route: 'discussion', viewPorts: { mainContent: {moduleId: 'discussion/discussion'}, 
-					sideBar: { moduleId: 'sideBar/ads'} } , 
-					title: 'Discussion', nav:true },
-				{ route: 'eventDetail/:eventId', viewPorts: { mainContent: { moduleId: 'events/eventDetail'}, 
-					sideBar: { moduleId: 'sideBar/ads'} } , name: 'eventDetail'},
-				{ route: 'addJob', name: 'addJob', viewPorts: 
-					{ mainContent: {moduleId: 'jobs/addJob'}, sideBar: { moduleId: 'sideBar/sponsors'}}},
 				
 					{ route: 'applicants', name: 'applicants', viewPorts: { mainContent: {moduleId: 'applicants/applicants'}, 
-					sideBar: { moduleId: 'sideBar/sponsors'}},  
+					},  
 					title: 'applicants', nav: true },
 					
 				{ route: 'addApplicant', name: 'addApplicant', viewPorts: 
-					{ mainContent: {moduleId: 'applicants/addApplicant'}, sideBar: { moduleId: 'sideBar/sponsors'}}}
+					{ mainContent: {moduleId: 'applicants/addApplicant'}}}
 	
 		]);
 	}
